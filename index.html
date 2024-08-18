@@ -4,122 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOMO Whale Coin</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <style>
-        /* Custom Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #E0F2FE;
-            color: #1E3A8A;
-        }
-        .landing {
-            background-color: #2563EB;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .whale-image {
-            width: 50%;
-            margin: 20px auto;
-        }
-        .btn-buy-now {
-            background-color: #FFFFFF;
-            color: #2563EB;
-            padding: 10px 20px;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-        .btn-buy-now:hover {
-            background-color: #93C5FD;
-        }
-        footer {
-            background-color: #1E3A8A;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
-        }
-        .social-media a {
-            margin: 0 10px;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        #panic-animation {
-            margin-top: 20px;
-            color: #DC2626;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Landing Page -->
-    <section id="landing" class="landing">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="whale-watching.html">Whale Watching</a>
+        <a href="staking.html">Staking</a>
+        <a href="whale-panic.html">Panic Button</a>
+        <a href="fomo-wave-tracker.html">Wave Tracker</a>
+    </div>
+
+    <section class="landing">
         <h1 class="text-4xl md:text-6xl font-bold">Ride the Waves with FOMO Whale Coin!</h1>
         <p class="text-xl md:text-2xl mt-4">Don’t let the FOMO sink your ship—track, stake, and stay ahead of the game.</p>
         <a href="https://pancakeswap.finance/swap?outputCurrency=FOMO-WHALE-Coin" class="btn-buy-now">Buy Now</a>
-        <img src="whale.png" alt="Cartoon Whale" class="whale-image">
-        <div class="wave-animation"></div>
+        <img src="images/whale.png" alt="Cartoon Whale" class="whale-image">
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about py-16 px-4">
-        <h2 class="text-3xl font-bold text-center">About FOMO Whale Coin</h2>
-        <p class="text-lg mt-4 text-center max-w-2xl mx-auto">FOMO Whale Coin is the latest cryptocurrency riding the waves of the digital ocean. Its purpose is to help you avoid FOMO by tracking and staking your investments smartly.</p>
-        <h3 class="text-2xl font-semibold mt-8 text-center">Roadmap</h3>
-        <div class="roadmap mt-4">
-            <ul class="list-disc list-inside max-w-xl mx-auto">
-                <li>Q3 2024: Launch and Initial Marketing</li>
-                <li>Q4 2024: Staking Pools and Exchange Listings</li>
-                <li>Q1 2025: Whale Watching Leaderboard</li>
-                <li>Q2 2025: FOMO Wave Tracker Launch</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Whale Watching -->
-    <section id="whale-watching" class="whale-watching py-16 px-4 bg-blue-100">
-        <h2 class="text-3xl font-bold text-center">Top 10 Holders</h2>
-        <table id="leaderboard" class="table-auto w-full mt-8 max-w-2xl mx-auto border-collapse border border-blue-200">
-            <!-- Content will be dynamically filled by JavaScript -->
-        </table>
-    </section>
-
-    <!-- Staking Pools -->
-    <section id="staking" class="staking py-16 px-4">
-        <h2 class="text-3xl font-bold text-center">Stake Your FOMO Whale Coins</h2>
-        <p class="text-lg text-center mt-4">APY: <span id="apy">Loading...</span></p>
-        <p class="text-lg text-center">Total Staked: <span id="total-staked">Loading...</span></p>
-        <p class="text-lg text-center">Your Stake: <span id="your-stake">Loading...</span></p>
-        <div class="flex justify-center mt-8">
-            <button onclick="stake()" class="bg-blue-600 text-white py-2 px-4 rounded-full mx-2">Stake</button>
-            <button onclick="unstake()" class="bg-red-600 text-white py-2 px-4 rounded-full mx-2">Unstake</button>
-        </div>
-    </section>
-
-    <!-- Whale Panic Button -->
-    <section id="whale-panic" class="whale-panic py-16 px-4 bg-blue-100 text-center">
-        <h2 class="text-3xl font-bold">Whale Panic Button</h2>
-        <button onclick="panic()" class="bg-yellow-500 text-white py-2 px-6 rounded-full mt-8">Don't Panic!</button>
-        <div id="panic-animation"></div>
-    </section>
-
-    <!-- FOMO Wave Tracker -->
-    <section id="fomo-wave-tracker" class="fomo-wave-tracker py-16 px-4">
-        <h2 class="text-3xl font-bold text-center">FOMO Wave Tracker</h2>
-        <canvas id="wave-chart" class="mt-8 max-w-3xl mx-auto"></canvas>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer" class="footer">
-        <div class="social-media mb-4">
+    <footer>
+        <div class="social-media">
             <a href="https://twitter.com/FOMOWhaleCoin">Twitter</a>
             <a href="https://reddit.com/r/FOMOWhaleCoin">Reddit</a>
             <a href="https://t.me/FOMOWhaleCoin">Telegram</a>
         </div>
-        <form id="newsletter" class="max-w-lg mx-auto">
-            <label for="email" class="block mb-2">Sign up for updates:</label>
+        <form id="newsletter">
+            <label for="email">Sign up for updates:</label>
             <div class="flex">
                 <input type="email" id="email" name="email" placeholder="Enter your email" class="flex-grow p-2 rounded-l">
                 <button type="submit" class="bg-blue-600 text-white p-2 rounded-r">Subscribe</button>
@@ -127,116 +39,5 @@
         </form>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Fetch top holders from BscScan API
-        async function fetchTopHolders() {
-            const apiKey = 'YOUR_BSCSCAN_API_KEY';
-            const contractAddress = 'FOMO_WHALE_COIN_CONTRACT_ADDRESS';
-            const url = `https://api.bscscan.com/api?module=account&action=tokenholderlist&contractaddress=${contractAddress}&page=1&offset=10&apikey=${apiKey}`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-
-                const leaderboard = document.getElementById('leaderboard');
-                leaderboard.innerHTML = `<tr><th>Rank</th><th>Address</th><th>Balance</th></tr>`;
-                
-                data.result.forEach((holder, index) => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td class="border border-blue-200 px-4 py-2">${index + 1}</td>
-                        <td class="border border-blue-200 px-4 py-2">${holder.address}</td>
-                        <td class="border border-blue-200 px-4 py-2">${holder.balance}</td>
-                    `;
-                    leaderboard.appendChild(row);
-                });
-            } catch (error) {
-                console.error('Error fetching top holders:', error);
-            }
-        }
-
-        // Call the function to fetch top holders
-        fetchTopHolders();
-
-        // Simulate staking (real implementation would involve smart contract interaction)
-        let userStake = 0;
-        const totalStaked = 1000000; // Example total staked amount
-        const apy = 12.5; // Example APY
-
-        function updateStakingInfo() {
-            document.getElementById('apy').innerText = `${apy}%`;
-            document.getElementById('total-staked').innerText = `${totalStaked} FOMO`;
-            document.getElementById('your-stake').innerText = `${userStake} FOMO`;
-        }
-
-        function stake() {
-            const amount = prompt("Enter amount to stake:");
-            userStake += parseFloat(amount);
-            updateStakingInfo();
-        }
-
-        function unstake() {
-            const amount = prompt("Enter amount to unstake:");
-            userStake -= parseFloat(amount);
-            updateStakingInfo();
-        }
-    // Initial update
-    updateStakingInfo();
-
-    // Whale Panic Button
-    function panic() {
-        const panicMessage = document.getElementById('panic-animation');
-        panicMessage.innerHTML = `<p>Don't Panic! HODL your FOMO Whale Coins!</p>`;
-        panicMessage.style.animation = 'shake 0.5s';
-        setTimeout(() => {
-            panicMessage.innerHTML = '';
-        }, 3000);
-    }
-
-    // Initialize Chart.js for wave tracker
-    const ctx = document.getElementById('wave-chart').getContext('2d');
-    const waveChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: [], // Labels for time intervals
-            datasets: [{
-                label: 'Buy Pressure',
-                data: [], // Data for buy pressure
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 2,
-                fill: false
-            }, {
-                label: 'Sell Pressure',
-                data: [], // Data for sell pressure
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 2,
-                fill: false
-            }]
-        },
-        options: {
-            scales: {
-                x: {
-                    type: 'time',
-                    time: {
-                        unit: 'minute'
-                    }
-                },
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    // Function to update wave tracker data (placeholder data)
-    function updateWaveTracker() {
-        waveChart.data.labels.push(new Date().toLocaleTimeString());
-        waveChart.data.datasets[0].data.push(Math.random() * 100); // Buy pressure
-        waveChart.data.datasets[1].data.push(Math.random() * 100); // Sell pressure
-        waveChart.update();
-    }
-
-    // Update the wave tracker every 5 seconds
-    setInterval(updateWaveTracker, 5000);
-</script>
+</body>
+</html>

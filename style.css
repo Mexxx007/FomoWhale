@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E0F2FE;
+    color: #1E3A8A;
+}
+
+.navbar {
+    background-color: #2563EB;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}

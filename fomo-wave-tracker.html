@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMO Wave Tracker - FOMO Whale Coin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="whale-watching.html">Whale Watching</a>
+        <a href="staking.html">Staking</a>
+        <a href="whale-panic.html">Panic Button</a>
+        <a href="fomo-wave-tracker.html">Wave Tracker</a>
+    </div>
+
+    <!-- FOMO Wave Tracker Section -->
+    <section class="fomo-wave-tracker py-16 px-4">
+        <h2 class="text-3xl font-bold text-center">FOMO Wave Tracker</h2>
+        <p class="text-lg text-center mt-4 max-w-2xl mx-auto">
+            The FOMO Wave Tracker provides a real-time view of the market’s buying and selling pressure, symbolized as waves that reflect the current sentiment. Stay ahead of the market trends by keeping an eye on the wave heights!
+        </p>
+        <div class="wave-tracker-container mt-8 max-w-3xl mx-auto">
+            <canvas id="wave-chart"></canvas>
+        </div>
+        <img src="images/wave-tracker.png" alt="FOMO Wave Tracker" class="max-w-sm mx-auto mt-4">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://twitter.com/FOMOWhaleCoin">Twitter</a>
+            <a href="https://reddit.com/r/FOMOWhaleCoin">Reddit</a>
+            <a href="https://t.me/FOMOWhaleCoin">Telegram</a>
+        </div>
+        <form id="newsletter" class="max-w-lg mx-auto">
+            <label for="email" class="block mb-2">Sign up for updates:</label>
+            <div class="flex">
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="flex-grow p-2 rounded-l">
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded-r">Subscribe</button>
+            </div>
+        </form>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panic Button - FOMO Whale Coin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="whale-watching.html">Whale Watching</a>
+        <a href="staking.html">Staking</a>
+        <a href="whale-panic.html">Panic Button</a>
+        <a href="fomo-wave-tracker.html">Wave Tracker</a>
+    </div>
+
+    <section class="whale-panic py-16 px-4 bg-blue-100 text-center">
+        <h2 class="text-3xl font-bold">Whale Panic Button</h2>
+        <img src="images/panic.png" alt="Whale Panic Button" class="max-w-sm mx-auto mt-4">
+        <button onclick="panic()" class="bg-yellow-500 text-white py-2 px-6 rounded-full mt-8">Don't Panic!</button>
+        <div id="panic-animation"></div>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://twitter.com/FOMOWhaleCoin">Twitter</a>
+            <a href="https://reddit.com/r/FOMOWhaleCoin">Reddit</a>
+            <a href="https://t.me/FOMOWhaleCoin">Telegram</a>
+        </div>
+        <form id="newsletter">
+            <label for="email">Sign up for updates:</label>
+            <div class="flex">
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="flex-grow p-2 rounded-l">
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded-r">Subscribe</button>
+            </div>
+        </form>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
